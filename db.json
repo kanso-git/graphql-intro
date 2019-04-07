@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "firstName": "bou me3za el assly",
+      "age": 110,
+      "id": "u0-POWC",
+      "companyId": "2"
+    },
+    {
+      "firstName": "bou me3za2",
+      "age": 110,
+      "id": "7wOl7rI"
+    },
+    {
+      "firstName": "bou me3za",
+      "age": 110,
+      "id": "S-Q7lbJ"
+    },
+    {
+      "firstName": "bou me3za",
+      "age": 110,
+      "id": "MLXm-ym"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "iPhone"
+    },
+    {
+      "id": "2",
+      "name": "Google",
+      "description": "search"
+    }
+  ]
+}
