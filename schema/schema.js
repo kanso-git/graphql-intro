@@ -11,6 +11,14 @@ const {
     GraphQLNonNull
 } = graphql;
 
+/* 
+Company type
+  creating a type 'GraphQLObjectType' :
+  1 - the name shoud be camelcase (always the first lettre is uppercase)
+  2 - the fields is a function to avoid cerclaire reference issue 
+  
+    Company <------ User (a user has a company id )
+*/
 const CompanyType = new GraphQLObjectType({
     name: 'Company',
     fields: () => ({
@@ -33,6 +41,16 @@ const CompanyType = new GraphQLObjectType({
     })
 });
 
+/*
+User type 
+the structure of a type is always the same - use the new opreator to create a GraphQLObjectType object
+that has the follwoing properties :
+    name -> this is the name the instance type (uppercase the first character)
+    fields -> this an object in which it holds all the columns properties with its type, 
+    the field type can be:
+                         - Primitive type : no need for resolver function
+                         - Custom type : needs a resolver 
+*/
 const UserType = new GraphQLObjectType({
     name: 'User',
     fields: () => ({
@@ -56,6 +74,9 @@ const UserType = new GraphQLObjectType({
     })
 });
 
+/*
+ same as above but the fields content are custom type instances
+*/
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -140,6 +161,7 @@ const mutation = new GraphQLObjectType({
     }
 })
 
+//module.exports (attention exports with s ) this node system module 
 module.exports = new GraphQLSchema({
     query: RootQuery,
     mutation
